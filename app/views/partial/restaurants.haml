@@ -1,0 +1,12 @@
+.restaurants
+  .fr.m1
+    %button.primary(ui-sref="restaurant-create({})") Add new restaurant
+  %h1(ng-if="restaurants.count == 0") Sorry, we didn't find any restaurants!
+  %h1(ng-if="!restaurants") Loading...
+  .rst(ng-repeat="r in restaurants" ui-sref="restaurant({id: r.id})")
+    %h2.rname {{ r.name }}
+    %p.rdesc {{ r.desc }}
+    .raddr1 {{ r.addr_1 }} 
+    .raddr2 {{ r.addr_2 }}
+    .raddrlocal {{ r.addr_city }}, {{ r.addr_state}} {{ r.addr_code }}
+    .raddrcoutnry {{ r.addr_country }}

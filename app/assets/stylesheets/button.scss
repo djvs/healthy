@@ -1,0 +1,29 @@
+button{
+  -webkit-border-radius: 6;
+  -moz-border-radius: 6;
+  border-radius: 6px;
+  padding: 6px 12px;
+  margin:0 12px;
+  text-decoration: none;
+  outline:none;
+  border:none;
+}
+button.primary {
+  color: #ffffff;
+  background: #3498db;
+}
+
+button.primary:hover {
+  background: #3cb0fd;
+  text-decoration: none;
+}
+button.danger {
+  color: #ffffff;
+  background: #ff4f4f;
+}
+
+button.danger:hover {
+  background: #ff7878;
+  text-decoration: none;
+}
+

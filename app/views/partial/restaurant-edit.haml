@@ -1,0 +1,44 @@
+.restaurant.oa
+  %h2(ng-if="!rst") Loading...
+  %a.backcrumb(ui-sref="restaurants" ng-if="page == 'create'") &larr; Back to restaurants list
+  %a.backcrumb(ui-sref="restaurant({id: rst.id})" ng-if="page == 'edit'") &larr; Back to main page for {{ rst.name }} 
+  .redit(ng-if="rst")
+    %h1.rname {{ verb }} {{ rst.name || 'new restaurant' }}
+    %table.formtable
+      %tr
+        %td Name 
+        %td
+          %input(ng-model="rst.name")
+      %tr
+        %td Description
+        %td
+          %textarea(ng-model="rst.desc")
+      %tr
+        %td Street address
+        %td
+          %input(ng-model="rst.addr_1")
+      %tr
+        %td Apt/Suite/Room
+        %td
+          %input(ng-model="rst.addr_2")
+      %tr
+        %td City
+        %td
+          %input(ng-model="rst.addr_city")
+      %tr
+        %td State/Province
+        %td
+          %input(ng-model="rst.addr_state")
+      %tr
+        %td ZIP/Postal Code
+        %td
+          %input(ng-model="rst.addr_code")
+      %tr
+        %td Country
+        %td
+          %input(ng-model="rst.addr_country")
+
+      %tr
+        %td(colspan="2")
+          %button.primary(ng-click="save()") Save
+

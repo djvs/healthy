@@ -1,0 +1,18 @@
+.header{
+  padding:0.5em;
+  color:white;
+  background-color:green;
+  .menu{
+    list-style-type:none;
+    li{
+      display:inline-block;
+      padding:1em;
+    }
+  }
+  .logo{
+    max-height:5em;
+    margin:0.6em;
+    float:left;
+    margin-right:2em;
+  }
+}

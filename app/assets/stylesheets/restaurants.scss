@@ -1,0 +1,36 @@
+.restaurants .rst{
+  cursor:pointer;
+
+  &:hover{
+    background-color:#fafafa;
+  }
+
+}
+.rst{
+  padding:2em;
+
+  > p, > div{
+    margin-bottom:0.5em;
+    font-size:0.9em;
+  }
+  .rdesc{
+    margin-bottom: 1em;
+    font-size: 1em;
+  }
+}
+
+.rst_rv{
+  padding:1em 0;
+
+  > p, > div{
+    margin-bottom:0.5em;
+  }
+}
+
+.reviews{
+  background-color:#fafafa;
+  > h2 {
+    padding-bottom:1em;
+  }
+  padding:2em;
+}

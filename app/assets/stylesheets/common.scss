@@ -1,0 +1,31 @@
+.cp{
+  cursor:pointer;
+}
+hr{
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #f0f0f0;
+  margin: 1em 0;
+  padding: 0; 
+}
+.oa{ overflow:auto; }
+.fr{ float:right; }
+.fl{ float:left; }
+.m1{ margin:1em; }
+.tal{ text-align:left; }
+.tac{ text-align:center; }
+.tar{ text-align:right; }
+
+a{ text-decoration:none; }
+a, a:hover, a:visited, a:active{
+  color:blue;
+}
+
+.backcrumb{
+  margin:1em 0;
+  display:block;
+}
+.bglg{
+  background-color:#fafafa;
+}

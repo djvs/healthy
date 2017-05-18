@@ -1,0 +1,62 @@
+<%= form_for(restaurant) do |f| %>
+  <% if restaurant.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(restaurant.errors.count, "error") %> prohibited this restaurant from being saved:</h2>
+
+      <ul>
+      <% restaurant.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :desc %>
+    <%= f.text_field :desc %>
+  </div>
+
+  <div class="field">
+    <%= f.label :addr_1 %>
+    <%= f.text_field :addr_1 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :addr_2 %>
+    <%= f.text_field :addr_2 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :addr_city %>
+    <%= f.text_field :addr_city %>
+  </div>
+
+  <div class="field">
+    <%= f.label :addr_code %>
+    <%= f.text_field :addr_code %>
+  </div>
+
+  <div class="field">
+    <%= f.label :addr_state %>
+    <%= f.text_field :addr_state %>
+  </div>
+
+  <div class="field">
+    <%= f.label :addr_country %>
+    <%= f.text_field :addr_country %>
+  </div>
+
+  <div class="field">
+    <%= f.label :phone_1 %>
+    <%= f.text_field :phone_1 %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,36 @@
+.restaurant.oa
+  %h2(ng-if="!rst") Loading...
+  .fr.m1
+    %button.primary(ui-sref="restaurant-edit({id: rst.id})") Edit
+    %button.danger(ng-click="delete()") Delete
+  .rst(ui-sref="restaurant({id: rst.id})")
+    %h1.rname {{ rst.name }}
+    %p.rdesc {{ rst.desc }}
+    .raddr1 {{ rst.addr_1 }} 
+    .raddr2 {{ rst.addr_2 }}
+    .raddrlocal {{ rst.addr_city }}, {{ rst.addr_state}} {{ rst.addr_code }}
+    .raddrcountry {{ rst.addr_country }}
+    .rphone1 {{ rst.phone_1 | tel }}
+    .rphone2 {{ rst.phone_2 | tel }}
+    .rgeo.m1.tar
+      %small Going there by geospatial coordinates for some reason?
+      %br
+      %small
+        Lat. 
+        %strong {{ rst.latitude }}
+        , long.
+        %strong {{ rst.longitude }}
+
+  .reviews
+    %h2(ng-if="rst.reviews.length <= 0") No reviews yet!
+    %h2(ng-if="rst.reviews.length > 0") Reviews
+    .rst_rv(ng-repeat="rv in rst.reviews")
+      %h4.rvname 
+        {{ rv.reviewer_name }}
+        %small
+          %a(ng-href="{{ 'mailto:' + rv.reviewer_email }}") (email)
+      %small.rvemail
+      %p.rvrev {{ rv.review }} 
+
+
+
