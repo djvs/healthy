@@ -10,7 +10,7 @@ app.factory('RestGen', ($http) => {
     }
     fact.delete = (id) => {
       params = {authenticity_token: $("input[name='authenticity_token']").val()}
-      return $http.delete(base + id, params)
+      return $http.delete(base + id, {params: params})
     }
     fact.create = (params) => {
       params.authenticity_token = $("input[name='authenticity_token']").val()
